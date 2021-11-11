@@ -12,8 +12,8 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>{`${basics.name} - ${basics.label}`} </title>
-        <meta name="description" content="My CV" />
+        <title>{`${basics.name} - ${basics.label} Resume`} </title>
+        <meta name="description" content="Anh Bui CV" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
