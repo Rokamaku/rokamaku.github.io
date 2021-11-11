@@ -1,0 +1,294 @@
+.resume {
+  margin: auto;
+  max-width: 1100px;
+  color: #dddddd;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.topSpacer {
+  margin-top: 85px;
+}
+
+.capsule {
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #394243 !important;
+}
+
+.capsuleBlock {
+  padding: 20px;
+  display: flex;
+}
+
+.profileImageContainer {
+  display: inline;
+  float: left;
+}
+
+.profileImage {
+  top: 186px;
+  left: 109px;
+  width: 152px;
+  height: 152px;
+  background: 0% 0% no-repeat padding-box;
+  border-radius: 50%;
+  opacity: 1;
+  display: block;
+  object-fit: cover;
+}
+
+.profileInfoContainer {
+  display: inline;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.profileName {
+  font-size: 24px;
+  margin: 15px 0px 5px 0px;
+  letter-spacing: 1px;
+}
+
+.profileTitle {
+  font-size: 16px;
+  margin: 0px;
+  letter-spacing: 1px;
+  font-weight: normal;
+  line-height: 25px;
+}
+
+.rightPanel {
+  border-left: solid 1px;
+  padding-left: 15px;
+  width: 250px;
+  margin-left: auto;
+  border-color: #2F3637;
+}
+
+.contactInfoContainer {
+  font-size: 14px;
+  line-height: 14px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border-bottom: solid 1px;
+  border-color: #2F3637;
+}
+
+.contactInfo {
+  margin-bottom: 14px;
+  width: 200px;
+  color: #999999;
+}
+
+.profileLinkContainer {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  width: 150px;
+}
+
+.profileLink {
+  text-decoration: none;
+  width: 200px;
+  color: #999999;
+}
+
+.profileLinkText {
+  margin-top: 3px;
+  font-size: 14px;
+  line-height: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100px;
+}
+
+.contactInfoEmail .contactInfoPhoneNumber{
+  width: 170px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+.profileSummaryStatement {
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+
+.profileTopSkillContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileTopSkill {
+  font-size: 13px;
+  display: inline;
+  border-radius: 15px;
+  border: none;
+  padding: 7px 10px 7px 10px;
+  margin: 5px;
+  min-width: 50px;
+  text-align: center;
+  background-color: #F15B28;
+}
+
+.capsuleDivider {
+  width: 100%;
+  border-top: 1px solid;
+  margin-bottom: 15px;
+  border-color: #2F3637;
+}
+
+.capsuleBotton {
+  padding-bottom: 15px;
+  display: flex;
+}
+
+.sectionHalf {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.iconText {
+  line-height: 25px;
+  font-size: 14px;
+  align-self: center;
+}
+
+.mainPanel {
+  width: 800px;
+  display: inline;
+  padding-right: 20px;
+}
+
+.sectionHeading {
+  line-height: 25px;
+  font-size: 24px;
+  font-weight: bold;
+  vertical-align: top;
+}
+
+.experienceContainer {
+  margin-top: 15px;
+  padding-left: 34px;
+}
+
+.experienceTitle {
+  font-weight: bold;
+  font-size: 16px;
+  color: #3092EC;
+}
+
+.experienceDuration {
+  float: right;
+  font-size: 14px;
+  text-decoration: none;
+  color: #999999;
+}
+
+.experienceSubtitle {
+  font-size: 14px;
+  text-decoration: none;
+  color: #999999;
+}
+
+.experienceAccomplishmentList {
+  margin-top: 3px;
+}
+
+.experienceAccomplishment {
+  margin-bottom: 10px;
+}
+
+.experienceSkill {
+  font-size: 11px;
+  border: none;
+  border-radius: 4px;
+  padding: 2px 0px 2px 4px;
+  margin: 5px 5px 0px 0px;
+  color: #999999;
+}
+
+.accomplishmentSkillContainer {
+  display: inline;
+}
+
+.skillPanelHeading {
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 0px;
+  margin: 0px;
+  color: #ddd;
+}
+
+.skillType {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #3092EC;
+}
+
+.skillContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 10px;
+}
+
+.skill {
+  font-size: 11px;
+  border: 1px solid;
+  display: inline;
+  border-radius: 4px;
+  padding: 2px 4px 2px 4px;
+  margin: 5px 5px 0px 0px;
+  line-height: 14px;
+  cursor: pointer;
+}
+
+.topMargin {
+  margin-top: 10px;
+}
+
+.capsuleSpacer {
+  margin-top: 15px;
+}
+
+.customExperienceDescription {
+  color: #999999;
+}
+
+.experienceSkillContainerIndent {
+  margin-left: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon {
+  height: 25px;
+  padding-right: 8px;
+  line-height: 25px !important;
+  font-size: 24px;
+  font-weight: 900;
+  color: #999999;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+}
+
+.profileLinkIcon {
+  margin-right: 5px;
+  font-size: 12px;
+  line-height: 14px;
+}
