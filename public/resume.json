@@ -5,9 +5,10 @@
     "email": "anhbh.uit@gmail.com",
     "phone": "+84 379 585 666",
     "url": "https://rokamaku.dev",
+    "yoe": 3,
     "summary": "A full stack developer with 3 years of experience in C#.NET technology as well as Front End Development, with good knowledge in Object-Oriented Analysis and Design, Database Design, and Design Patterns. Trying new things is what I am passion about. I'm eager to experiment on new change to improve the product.",
     "location": {
-      "address": "",
+      "address": "Binh Thanh",
       "city": "HCM",
       "countryCode": "VN"
     },
@@ -44,7 +45,12 @@
       "area": "Information System",
       "studyType": "Bachelors",
       "institution": "The University of Information Technology (UIT)",
-      "score": "7.69/10"
+      "score": "7.69/10",
+      "keywords": [
+        "C#.NET",
+        "Microsoft SQL",
+        "Git"
+      ]
     }
   ],
   "certificates": [
@@ -52,12 +58,18 @@
       "date": "2021-04-23",
       "issuer": "Microsoft",
       "name": "Microsoft Certified: Azure Developer Associate",
-      "url": "https://www.credly.com/badges/ba47c684-19c3-49d1-8377-c3ed13ff1ddb"
+      "url": "https://www.credly.com/badges/ba47c684-19c3-49d1-8377-c3ed13ff1ddb",
+      "keywords": [
+        "Azure"
+      ]
     },
     {
       "date": "2019-04-06",
       "issuer": "IIG",
-      "name": "TOEIC 770/990"
+      "name": "TOEIC 770/990",
+      "keywords": [
+        "English"
+      ]
     }
   ],
   "skills": [
@@ -65,14 +77,14 @@
       "keywords": [
         "C#.NET",
         "Javascript/Typescript",
-        "HTML5/JSX",
+        "HTML",
         "SCSS/CSS3"
       ],
       "name": "Programming Languages"
     },
     {
       "keywords": [
-        "ReactJS",
+        "React",
         "NodeJS",
         "NestJS",
         "Apollo",
@@ -86,7 +98,7 @@
     },
     {
       "keywords": [
-        "MS SQL",
+        "Microsoft SQL",
         "MongoDb",
         "Redis"
       ],
@@ -103,24 +115,43 @@
         "Git"
       ],
       "name": "Version Control"
+    },
+    {
+      "keywords": [
+        "English"
+      ],
+      "name": "Foreign Language"
     }
   ],
   "work": [
     {
       "highlights": [
-        "Communicate with customers and teammates to clarify the requirement",
-        "Maintain, develop feature for main web application of the system",
-        "Maintain, develop multiple Office add-ins for MS Word and MS Outlook",
-        "Build a VSTO extension for Outlook desktop using WPF and setup an installer for it"
+        {
+          "description": "Communicate with customers and teammates to clarify the requirement",
+          "keywords": []
+        },
+        {
+          "description": "Maintain and develop feature for main web application of the system",
+          "keywords": []
+        },
+        {
+          "description": "Maintain and develop multiple Office add-ins for Microsoft Word and Microsoft Outlook",
+          "keywords": []
+        },
+        {
+          "description": "Build a VSTO extension for Outlook desktop using WPF and setup an installer for it",
+          "keywords": []
+        }
       ],
       "summary": "A legal case management system built exclusively with Microsoft 365 to provide all the intelligence and methods for managing the life cycle of a Case / Matter for lawyer",
       "name": "Thread Legal",
-      "position": "Full stack Developer",
+      "position": "Full Stack Developer",
       "startDate": "2018-09",
       "endDate": "2021-10",
       "teamSize": 5,
       "keywords" : [
-        "HTML/JSX",
+        "C#.NET",
+        "HTML",
         "SCSS/CSS",
         "Javascript/Typescript",
         "React",
@@ -128,11 +159,12 @@
         "ASP.Net Core",
         "WPF",
         "Entity Framework Core",
-        "MS SQL",
+        "Microsoft SQL",
         "Redis",
         "Sharepoint Online",
-        "MS Graph",
-        "SignalR"
+        "Microsoft Graph",
+        "SignalR",
+        "Azure"
       ]
     }
   ],
@@ -141,20 +173,23 @@
       "startDate": "2018-09",
       "endDate": "2019-02",
       "name": "Automation lock through face recognition",
-      "description": "A system uses face recognition to automatically unlock a door when an authorized person is in front of it. It includes two parts: an IoT system and a web base application. IoT system take responsibility to capture face data, send to the face recognition service from Azure and control the door lock while web based is used for manage face data to train as well as show the image capture by IoT system",
-      "roles": [ "Full stack Developer" ],
+      "description": "An IoT system uses face recognition to automatically unlock a door when an authorized person is in front of it",
+      "roles": [ "Full Stack Developer" ],
+      "url": "https://github.com/Rokamaku/LockAutomationThroughFaceRecognition",
       "keywords": [
-        "HTML/JSX",
+        "C#.NET",
+        "HTML",
         "SCSS/CSS",
         "Javascript/Typescript",
         "React",
         "Redux",
-        "Azure",
         "ASP.Net Core",
         "Entity Framework Core",
         "Python",
-        "MS SQL Server",
-        "Serverless"
+        "Microsoft SQL",
+        "Azure",
+        "Azure Function",
+        "Microsoft Recognition API"
       ]
     }
   ],
@@ -162,7 +197,6 @@
     {
       "keywords": [
         "IT",
-        "Philosophy",
         "Comic",
         "Novel"
       ],

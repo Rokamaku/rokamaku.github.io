@@ -4,12 +4,10 @@
     "plugin:@next/next/recommended",
     "plugin:react-hooks/recommended",
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
-  // "plugins": [
-  //   "react",
-  //   "react-hooks"
-  // ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -21,6 +19,12 @@
     "react/jsx-uses-vars": "error",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "@next/next/no-img-element": "off"
+    "@next/next/no-img-element": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
   }
 }

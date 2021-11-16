@@ -14,7 +14,7 @@
   border-radius: 10px;
   width: 100%;
   margin-bottom: 10px;
-  background-color: #394243 !important;
+  background-color: #394243;
 }
 
 .capsuleBlock {
@@ -135,7 +135,18 @@
   margin: 5px;
   min-width: 50px;
   text-align: center;
-  background-color: #F15B28;
+  background-color: #d65226;
+
+  &:hover {
+    background-color: #196ebd;
+    cursor: pointer;
+  }
+}
+
+.skillSelected {
+  color: #ffffff !important;
+  background-color: #3092EC;
+  cursor: pointer;
 }
 
 .capsuleDivider {
@@ -166,6 +177,10 @@
   width: 800px;
   display: inline;
   padding-right: 20px;
+}
+
+.sectionHeadingContainer {
+
 }
 
 .sectionHeading {
@@ -207,13 +222,25 @@
   margin-bottom: 10px;
 }
 
+.workSummaryStatement {
+  @extend .profileSummaryStatement;
+  margin-bottom: 3px;
+}
+
 .experienceSkill {
   font-size: 11px;
   border: none;
   border-radius: 4px;
-  padding: 2px 0px 2px 4px;
+  padding: 2px 2px 2px 4px;
   margin: 5px 5px 0px 0px;
   color: #999999;
+
+  &:hover {
+    background-color: #3092EC;
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 0.75;
+  }
 }
 
 .accomplishmentSkillContainer {
@@ -251,6 +278,13 @@
   margin: 5px 5px 0px 0px;
   line-height: 14px;
   cursor: pointer;
+
+  &:hover {
+    background-color: #3092EC;
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 0.75;
+  }
 }
 
 .topMargin {
@@ -285,6 +319,12 @@
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
+}
+
+.rightPanelIcon {
+  @extend .icon;
+  height: 16px;
+  font-size: 20px;
 }
 
 .profileLinkIcon {

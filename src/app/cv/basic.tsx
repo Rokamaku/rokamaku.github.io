@@ -1,74 +1,80 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 import { MdLocationOn } from 'react-icons/md';
 import { GrStar } from 'react-icons/gr';
 import styles from '../../styles/Cv.module.scss';
+import { useSelectedSkill } from '../hooks/useSelectedSkills';
 
 export interface BasicData {
-  name?: string,
-  label?: string,
-  image?: string,
-  email?: string,
-  phone?: string,
-  url?: string,
-  summary?: string,
+  name?: string;
+  label?: string;
+  image?: string;
+  email?: string;
+  phone?: string;
+  url?: string;
+  summary?: string;
+  yoe?: number;
   location?: {
-    address?: string,
-    postalCode?: string,
-    city?: string,
-    countryCode?: string,
-    region?: string
-  },
+    address?: string;
+    postalCode?: string;
+    city?: string;
+    countryCode?: string;
+    region?: string;
+  };
   profiles?: {
-    network?: string,
-    username?: string,
-    url?: string,
-    iconName?: string
-  }[],
+    network?: string;
+    username?: string;
+    url?: string;
+    iconName?: string;
+  }[];
   topSkills?: string[];
 }
 
-export interface BasicProps {
+interface BasicProps {
   data: BasicData;
+  keywords?: string[];
+  onKeywordSelect: (keyword: string, isSelected?: boolean) => void;
 }
 
 export const Basic: React.FunctionComponent<BasicProps> = (props) => {
-  let { data } = props;
-  let networkIcon: Record<string, any> = {
+  const topSkills = useSelectedSkill(props.data.topSkills || [], props.keywords || []);
+
+  const networkIcon: Record<string, any> = {
     Linkedin: <FaLinkedin className={styles.profileLinkIcon}/>,
     Github: <FaGithub className={styles.profileLinkIcon}/>,
     Twitter: <FaTwitter className={styles.profileLinkIcon}/>
   }
+
   return (
     <div className={styles.capsule}>
       <div className={styles.capsuleBlock}>
         <div className={styles.profileImageContainer}>
-          <img className={styles.profileImage} src={data.image} alt="My Avatar" width={150} height={150} placeholder="blur" />
+          <img className={styles.profileImage} src={props.data.image} alt="My Avatar" width={150} height={150} placeholder="blur" />
         </div>
         <div className={styles.profileInfoContainer} >
-          <h1 className={styles.profileName}>{data.name}</h1>
-          <div className={styles.profileTitle}>{data.label}</div>
-          <div className={styles.profileSummaryStatement}>{data.summary}</div>
+          <h1 className={styles.profileName}>{props.data.name}</h1>
+          <div className={styles.profileTitle}>{props.data.label}</div>
+          <div className={styles.profileSummaryStatement}>{props.data.summary}</div>
           <div className={styles.profileTopSkillContainer}>
-            {data.topSkills?.map(it => (
-              <span key={it} className={`${styles.profileTopSkill} ${it}`}>{it}</span>
+            {topSkills?.map(it => (
+              <span key={it.name} className={`${styles.profileTopSkill} ${it.isSelected ? styles.skillSelected : ''}`} onClick={() => props.onKeywordSelect(it.name, !it.isSelected)} >{it.name}</span>
             ))}
           </div>
         </div>
         <div className={styles.rightPanel}>
           <div className={styles.contactInfoContainer}>
             <div className={styles.contactInfo} >
-              <a className={styles.profileLink} target="_blank" rel="noreferrer" href={`mailto:${data.email}`}>
+              <a className={styles.profileLink} target="_blank" rel="noreferrer" href={`mailto:${props.data.email}`}>
                 <FaEnvelope className={styles.profileLinkIcon} />
-                <span className={styles.contactInfoEmail}>{data.email}</span>
+                <span className={styles.contactInfoEmail}>{props.data.email}</span>
               </a>
             </div>
             <div className={styles.contactInfo} >
               <FaPhone className={styles.profileLinkIcon} />
-              <span>{data.phone}</span>
+              <span>{props.data.phone}</span>
             </div>
           </div>
-          {data.profiles?.map(pr => (
+          {props.data.profiles?.map(pr => (
             <div key={pr.network} className={styles.profileLinkContainer}>
               <a className={styles.profileLink} target="_blank" rel="noreferrer" href={pr.url}>
                 { networkIcon[pr?.network ?? ''] }
@@ -83,11 +89,11 @@ export const Basic: React.FunctionComponent<BasicProps> = (props) => {
         <div className={styles.capsuleBotton}>
           <span className={styles.sectionHalf}>
             <MdLocationOn className={styles.icon} size={35}/>
-            <span className={styles.iconText}>{`${data.location?.city}, ${data.location?.countryCode}`}</span>
+            <span className={styles.iconText}>{`${props.data.location?.address}, ${props.data.location?.city}, ${props.data.location?.countryCode}`}</span>
           </span>
           <span className={styles.sectionHalf}>
             <GrStar className={styles.icon} size={35} />
-            <span className={styles.iconText}>3 years professional experience</span>
+            <span className={styles.iconText}>{props.data.yoe} years professional experience</span>
           </span>
         </div>
       </div>

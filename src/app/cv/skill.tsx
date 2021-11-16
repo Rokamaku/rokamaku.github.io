@@ -1,30 +1,49 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import { FaTools } from 'react-icons/fa';
 import styles from '../../styles/Cv.module.scss';
+import { useSelectedSkill } from '../hooks/useSelectedSkills';
 
 export interface SkillData {
-  name?: string,
-  level?: string,
-  keywords?: string[]
+  name: string;
+  level?: string;
+  keywords?: string[];
 }
 
 export interface SkillProps {
-  data: SkillData[]
+  data: SkillData[];
+  keywords?: string[];
+  onKeywordSelect: (keyword: string, isSelected?: boolean) => void;
 }
 
 export const Skill: React.FunctionComponent<SkillProps> = (props) => {
-  const { data } = props;
+  const flattenSkills = useMemo(() => {
+    const flattenSkills: string[] = [];
+    props.data.forEach(value => {
+      value.keywords?.forEach(kw => {
+        flattenSkills.push(kw)
+      })
+    })
+    return flattenSkills;
+  }, [props.data]);
+  const skills = useSelectedSkill(flattenSkills, props.keywords || []);
+
   return (
     <>
-      <div className={styles.skillPanelHeading}>Skills</div>
+      <div className={`${styles.sectionHeadingContainer} ${styles.topMargin}`}>
+        <FaTools className={styles.rightPanelIcon} />
+        <span className={styles.skillPanelHeading}>Skills</span>
+      </div>
       {
-        data.map(it => (
+        props.data.map(it => (
           <div key={it.name}>
             <div className={styles.skillType}>{it.name}</div>
             <div className={styles.skillContainer}>
               {
-                it.keywords?.map(skillName => (
-                  <span key={skillName} className={`${styles.skill} ${skillName}`}>{skillName}</span>
-                ))
+                it.keywords?.map(skillName => {
+                  let currentSkill = skills.filter(sk => sk.name.toLowerCase() === skillName.toLowerCase())[0];
+                  return <span key={skillName} className={`${styles.skill} ${currentSkill?.isSelected ? styles.skillSelected : ''}`}
+                    onClick={() => props.onKeywordSelect(currentSkill.name, !currentSkill.isSelected)}>{skillName}</span>
+                })
               }
             </div>
           </div>
