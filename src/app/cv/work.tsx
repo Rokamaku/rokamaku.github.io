@@ -6,6 +6,7 @@ import { useFilteredSkills } from '../hooks/useFilteredSkills';
 
 export interface WorkData {
   name?: string;
+  projectName?: string;
   position?: string;
   url?: string;
   startDate?: string;
@@ -50,6 +51,9 @@ export const Work: React.FunctionComponent<WorkProps> = (props) => {
             </div>
             <div className={styles.experienceSubtitleContainer} >
               <span className={styles.experienceSubtitle}>{it.name}</span>
+            </div>
+            <div className={styles.workSummaryStatement}>
+              Project: {it.projectName}
             </div>
             <div className={styles.workSummaryStatement}>
               Description: {it.summary}

@@ -143,7 +143,8 @@
         }
       ],
       "summary": "A legal case management system built exclusively with Microsoft 365 to provide all the intelligence and methods for managing the life cycle of a Case / Matter for lawyer",
-      "name": "Thread Legal",
+      "name": "iDealogic",
+      "projectName": "Thread Legal",
       "position": "Full Stack Developer",
       "startDate": "2018-09",
       "endDate": "2021-10",
