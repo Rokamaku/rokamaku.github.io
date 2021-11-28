@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaTwitter, FaSkype } from 'react-icons/fa';
 import { MdLocationOn } from 'react-icons/md';
 import { GrStar } from 'react-icons/gr';
 import styles from '../../styles/Cv.module.scss';
@@ -42,7 +42,8 @@ export const Basic: React.FunctionComponent<BasicProps> = (props) => {
   const networkIcon: Record<string, any> = {
     Linkedin: <FaLinkedin className={styles.profileLinkIcon}/>,
     Github: <FaGithub className={styles.profileLinkIcon}/>,
-    Twitter: <FaTwitter className={styles.profileLinkIcon}/>
+    Twitter: <FaTwitter className={styles.profileLinkIcon}/>,
+    Skype: <FaSkype className={styles.profileLinkIcon}/>
   }
 
   return (
