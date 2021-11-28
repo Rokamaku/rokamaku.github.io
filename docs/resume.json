@@ -163,7 +163,8 @@
         "Sharepoint Online",
         "Microsoft Graph",
         "SignalR",
-        "Azure"
+        "Azure",
+        "Git"
       ]
     }
   ],
@@ -188,7 +189,8 @@
         "Microsoft SQL",
         "Azure",
         "Azure Function",
-        "Microsoft Recognition API"
+        "Microsoft Recognition API",
+        "Git"
       ]
     }
   ],
