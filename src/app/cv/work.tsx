@@ -62,7 +62,7 @@ export const Work: React.FunctionComponent<WorkProps> = (props) => {
               Team size: {it.teamSize}
             </div>
             <div className={styles.workSummaryStatement}>
-              Responsibility:
+              Responsibilities:
               <ul className={styles.experienceAccomplishmentList}>
                 {
                   it.highlights?.map(hl => (
